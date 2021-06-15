@@ -1,10 +1,9 @@
 class Player:
-    def __init__(self):
-        pass
+    def __init__(self, name):
+        self.name = name
+        self.chosen_gesture = ''
+        self.score = 0
+        self.gestures = ["rock", "paper", "scissors", "lizard", "Spock"]
 
-
-
-class Human(Player):
-    def __init__(self):
-        super().__init__()
-        pass
+    def choose_gesture(self):
+        print("Override this method")
