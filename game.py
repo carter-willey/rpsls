@@ -4,7 +4,7 @@ import time
 
 class Game:
     def __init__(self):
-        #self.player_one = Human()
+        self.player_one = None
         self.player_two = None
         self.run_game()
 
@@ -20,17 +20,18 @@ class Game:
               "Scissors decapitates Lizard\n"
               "Lizard eats Paper\n"
               "Paper disproves Spock\n"
-              "Spock vaporizes Rock\n"              )
+              "Spock vaporizes Rock")
 
 
 
     def run_game(self):
-        # Intro
+        # Intro & Instructions
         self.display_welcome()
         time.sleep(.75)
         self.display_rules()
-        #Instructions
+
         #Pick game mode - single player or multiplayer
+        self.choose_game_mode()
 
         #Game Rounds
         #Player one chooses gesture
@@ -47,6 +48,18 @@ class Game:
         #logic of what beats what
         pass
     def choose_game_mode(self):
-        #get input
-        #if single
-        pass
+        print("What game mode would you like to play?")
+        game_mode = input("Please enter '1' for Single player or '2' for Two player: ")
+        if game_mode != "1" and game_mode != "2":
+            while game_mode != "1" and game_mode != "2":
+                print("Please enter either '1' or '2'")
+                game_mode = input("Please enter '1' for Single player or '2' for Two player: ")
+        else:
+            int(game_mode)
+
+        if game_mode == 1:
+            self.player_one = Human()
+            self.player_two = AI()
+        else:
+            self.player_one = Human()
+            self.player_two = Human()
