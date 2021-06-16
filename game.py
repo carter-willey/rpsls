@@ -1,14 +1,16 @@
-from player import Player
+from human import Human
+from ai import AI
+
 class Game:
     def __init__(self):
-        self.player_one = Human("")
+        self.player_one = Human()
         self.player_two = None
+        self.player_one.display_gestures()
 
-
-    def display_welcome:
+    def display_welcome(self):
         print("Hello and welcome to Rock, Paper, Scissors, Lizard, Spock!")
 
-    def run_game:
+    def run_game(self):
         # Intro
         #Display welcome
         #Instructions
@@ -25,9 +27,10 @@ class Game:
         #display winner of game
         pass
 
-    def check_gestures:
+    def check_gestures(self):
         #logic of what beats what
         pass
-    def choose_game_mode:
+    def choose_game_mode(self):
         #get input
         #if single
+        pass
