@@ -13,7 +13,7 @@ class Human(Player):
         self.choose_gesture()
 
     def choose_gesture(self):
-        self.chosen_gesture = int(input("Please enter a number for the corresponding gesture you would like: "))
-
+        response = int(input("Please enter a number for the corresponding gesture you would like: "))
+        self.chosen_gesture = self.gestures[response - 1]
     def get_name(self):
         self.name = str(input("What is your name?: "))
