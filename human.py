@@ -2,7 +2,6 @@ from player import Player
 class Human(Player):
     def __init__(self):
         super().__init__()
-        self.get_name()
 
     def display_gestures(self):
         i = 1
@@ -15,5 +14,5 @@ class Human(Player):
     def choose_gesture(self):
         response = int(input("Please enter a number for the corresponding gesture you would like: "))
         self.chosen_gesture = self.gestures[response - 1]
-    def get_name(self):
-        self.name = str(input("What is your name?: "))
+    def get_name(self, number):
+        self.name = str(input(f"What is your name Player {number}?: "))

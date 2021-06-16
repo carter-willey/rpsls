@@ -4,7 +4,7 @@ import time
 
 class Game:
     def __init__(self):
-        self.player_one = None
+        self.player_one = Human()
         self.player_two = None
         self.run_game()
 
@@ -55,11 +55,12 @@ class Game:
                 print("Please enter either '1' or '2'")
                 game_mode = input("Please enter '1' for Single player or '2' for Two player: ")
         else:
-            int(game_mode)
+            game_mode = int(game_mode)
 
         if game_mode == 1:
-            self.player_one = Human()
+            self.player_one.get_name("One")
             self.player_two = AI()
         else:
-            self.player_one = Human()
+            self.player_one.get_name("One")
             self.player_two = Human()
+            self.player_two.get_name("Two")
