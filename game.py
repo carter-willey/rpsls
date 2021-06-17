@@ -23,6 +23,8 @@ class Game:
               "Lizard eats Paper\n"
               "Paper disproves Spock\n"
               "Spock vaporizes Rock")
+        time.sleep(1.5)
+        print("We will play best of three rounds to decide our winner!")
 
 
     def run_game(self):
@@ -33,7 +35,6 @@ class Game:
 
         #Pick game mode - single player or multiplayer
         self.choose_game_mode()
-        print(self.game_state)
         while self.game_state == True:
             #Game Rounds
             #Player one and two choose gesture
