@@ -7,5 +7,5 @@ class AI(Player):
 
     def choose_gesture(self):
         random_index = random.randint(0,4)
-        self.chosen_gesture = self.gestures[random_index]
+        self.chosen_gesture = self.gestures_list[random_index]
         print(self.chosen_gesture)

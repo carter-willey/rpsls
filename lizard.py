@@ -5,3 +5,5 @@ class Lizard(Gesture):
         self.name = "lizard"
         self.beats = ["Spock", "paper"]
         self.gets_beat_by = ["rock", "scissors"]
+    def __str__(self):
+        return "Lizard"

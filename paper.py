@@ -5,3 +5,5 @@ class Paper(Gesture):
         self.name = "paper"
         self.beats = ["rock", "Spock"]
         self.gets_beat_by = ["scissors", "lizard"]
+    def __str__(self):
+        return "Paper"

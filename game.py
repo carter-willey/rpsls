@@ -2,6 +2,7 @@ from human import Human
 from ai import AI
 import time
 
+
 class Game:
     def __init__(self):
         self.player_one = Human()
@@ -41,6 +42,7 @@ class Game:
             player_two_pick = self.player_two.choose_gesture()
 
         #determine winner of round, give winner score
+
         #loop to continue gameplay until best of three
 
 
