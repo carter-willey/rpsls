@@ -4,6 +4,8 @@ import random
 class AI(Player):
     def __init__(self):
         super().__init__()
+        self.value = 'ai'
+        self.name = "Mr. Robot"
 
     def choose_gesture(self):
         random_index = random.randint(0,4)
