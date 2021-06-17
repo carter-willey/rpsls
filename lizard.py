@@ -1,3 +1,7 @@
 from gesture import Gesture
 class Lizard(Gesture):
-    pass
+    def __init__(self):
+        super().__init__()
+        self.name = "lizard"
+        self.beats = ["Spock", "paper"]
+        self.gets_beat_by = ["rock", "scissors"]
