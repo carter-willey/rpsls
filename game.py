@@ -23,7 +23,6 @@ class Game:
               "Spock vaporizes Rock")
 
 
-
     def run_game(self):
         # Intro & Instructions
         self.display_welcome()
@@ -34,15 +33,20 @@ class Game:
         self.choose_game_mode()
 
         #Game Rounds
-        #Player one chooses gesture
-        #player two chooses gesture
+        #Player one and two choose gesture
+        player_one_pick = self.player_one.display_gestures()
+        if self.player_two == Human():
+            player_two_pick = self.player_two.display_gestures()
+        else:
+            player_two_pick = self.player_two.choose_gesture()
+
         #determine winner of round, give winner score
         #loop to continue gameplay until best of three
 
 
         #End Game
         #display winner of game
-        pass
+
 
     def check_gestures(self):
         #logic of what beats what
@@ -54,6 +58,7 @@ class Game:
             while game_mode != "1" and game_mode != "2":
                 print("Please enter either '1' or '2'")
                 game_mode = input("Please enter '1' for Single player or '2' for Two player: ")
+            game_mode = int(game_mode)
         else:
             game_mode = int(game_mode)
 
